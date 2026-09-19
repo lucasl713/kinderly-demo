@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f0e7" />
+  <title>Kinderly — trusted nanny matches</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=14" />
+</head>
+<body>
+  <section class="role-gate" id="roleGate">
+    <div class="onboarding-top"><a class="brand" href="#"><span class="brand-mark">k</span>Kinderly</a><select class="language-select" aria-label="Choose language"><option value="en">EN</option><option value="zh">中文</option><option value="th">ไทย</option><option value="my">မြန်မာ</option></select></div>
+    <div class="role-main"><p class="eyebrow">WELCOME TO KINDERLY</p><h1>Care starts with<br><em>the right connection.</em></h1><p>Tell us which side of the match you’re on.</p>
+      <div class="role-options"><button id="familyRole"><span>⌂</span><div><small>I’M A FAMILY</small><b>Find a trusted nanny</b><p>Describe your care needs and meet verified matches.</p></div><i>→</i></button><button id="helperRole"><span>♡</span><div><small>I’M A NANNY</small><b>Build my professional profile</b><p>Show your experience, preferences and work status.</p></div><i>→</i></button></div>
+      <section class="market-pulse" aria-label="Example marketplace activity"><div class="pulse-heading"><div><span class="live-dot"></span><b>Marketplace activity</b></div><small>Prototype sample activity · updates automatically</small></div><div class="pulse-columns"><article><header><div><small>AVAILABLE HELPERS</small><b>Ready to work</b></div><span>24 active</span></header><div class="ticker-window"><div class="ticker-track helper-ticker"><div><i>PN</i><p><b>Pim · Bangkok</b><small>6 years · Infant & toddler care</small></p><em>Now</em></div><div><i>MA</i><p><b>May · Nonthaburi</b><small>4 years · Newborn routines</small></p><em>2m</em></div><div><i>NO</i><p><b>Nok · Thong Lo</b><small>8 years · Twins & first aid</small></p><em>5m</em></div><div><i>TH</i><p><b>Thiri · Sathorn</b><small>3 years · Toddler learning</small></p><em>8m</em></div><div><i>PN</i><p><b>Pim · Bangkok</b><small>6 years · Infant & toddler care</small></p><em>Now</em></div><div><i>MA</i><p><b>May · Nonthaburi</b><small>4 years · Newborn routines</small></p><em>2m</em></div></div></div></article><article><header><div><small>FAMILIES HIRING</small><b>Open roles</b></div><span>18 active</span></header><div class="ticker-window"><div class="ticker-track family-ticker"><div><i>KL</i><p><b>Family in Khlong Toei</b><small>฿28,000/mo · Start immediately</small></p><em>Now</em></div><div><i>AR</i><p><b>Family in Ari</b><small>฿25,000/mo · Mon–Fri</small></p><em>3m</em></div><div><i>SK</i><p><b>Family in Sukhumvit</b><small>฿32,000/mo · Infant care</small></p><em>6m</em></div><div><i>ST</i><p><b>Family in Sathorn</b><small>฿27,000/mo · Start next week</small></p><em>9m</em></div><div><i>KL</i><p><b>Family in Khlong Toei</b><small>฿28,000/mo · Start immediately</small></p><em>Now</em></div><div><i>AR</i><p><b>Family in Ari</b><small>฿25,000/mo · Mon–Fri</small></p><em>3m</em></div></div></div></article></div></section>
+    </div>
+  </section>
+
+  <section class="helper-onboarding" id="helperOnboarding" hidden>
+    <div class="onboarding-top"><a class="brand" href="#"><span class="brand-mark">k</span>Kinderly</a><div class="header-tools"><button class="switch-role" id="switchRole">← Switch role</button><select class="language-select" aria-label="Choose language"><option value="en">EN</option><option value="zh">中文</option><option value="th">ไทย</option><option value="my">မြန်မာ</option></select></div></div>
+    <div class="helper-shell"><aside class="helper-aside"><p class="eyebrow">BUILD YOUR PROFILE</p><div class="onboarding-steps helper-steps"><div class="step active"><span>1</span><p><b>Connect an account</b><small>Import name and photo</small></p></div><div class="step"><span>2</span><p><b>Share experience</b><small>Write or speak naturally</small></p></div><div class="step"><span>3</span><p><b>Review profile</b><small>Set preferences and status</small></p></div></div><div class="helper-safety"><span>⌁</span><p><b>You control what families see.</b><br>Phone, documents and exact address stay private.</p></div></aside>
+      <main class="helper-main">
+        <div id="helperConnect"><p class="eyebrow">STEP 1 OF 3</p><h1>Start with an account<br><em>you already use.</em></h1><p class="helper-lede">For this prototype, clicking a provider imports a random mock name and photo. You review everything before it becomes public.</p><div class="social-logins"><button data-provider="LINE"><span class="line-color">L</span><b>Continue with LINE</b><small>Recommended</small></button><button data-provider="Facebook"><span class="fb-color">f</span><b>Continue with Facebook</b><small>Name + photo</small></button><button data-provider="WeChat"><span class="wechat-color">◉</span><b>Continue with WeChat</b><small>Name + photo</small></button><button data-provider="WhatsApp"><span class="wa-color">◔</span><b>Continue with WhatsApp</b><small>Mock phone login</small></button></div><div class="social-note">✓ Prototype only — no account data is actually transmitted.</div></div>
+        <div id="helperExperience" hidden><button class="back-btn" id="helperBack1">← Back</button><p class="eyebrow">STEP 2 OF 3</p><h1>Tell us about your<br><em>care experience.</em></h1><div class="imported-profile"><img id="helperPhoto" src="assets/nok.svg" alt="Imported profile photo"><div><small>IMPORTED FROM <span id="providerName">LINE</span></small><b id="helperName">Nok</b><p>Confirm or replace this professional photo.</p></div><button id="randomizePhoto">Try another photo</button></div><label class="photo-approval"><input type="checkbox" id="photoApproved" checked> Use this as my professional profile photo</label><div class="experience-box"><textarea id="experiencePrompt" aria-label="Describe your nanny experience" maxlength="900"></textarea><div><span><b id="experienceCount">0</b>/900</span><button id="helperVoice">◉</button><button class="continue-btn" id="buildProfileBtn">Build my profile <span>→</span></button></div></div></div>
+        <div id="helperReview" hidden><button class="back-btn" id="helperBack2">← Back</button><p class="eyebrow">STEP 3 OF 3</p><h1>Your professional<br><em>profile is taking shape.</em></h1><div class="helper-preview"><img id="previewPhoto" src="assets/nok.svg" alt="Profile preview"><div><small>PROFILE PREVIEW</small><h2 id="previewName">Nok</h2><p>Infant nanny · Bangkok</p><div><span>6 years</span><span>0–3 years</span><span>Thai + English</span></div></div><b><span id="helperStrength">80</span>%<small>complete</small></b></div><div class="profile-facts"><section><small>EXPERIENCE</small><b>6 years · Infant and toddler care</b><p>Feeding, children’s meals and daily care logs</p></section><section><small>WORK PREFERENCES</small><b>Live-out · Mon–Fri · Bangkok</b><p>฿22,000–27,000 · Child-related duties only</p></section></div><div class="work-status"><p><b>Current work status</b><small>This controls which hiring steps are available.</small></p><select><option>Thai citizen</option><option selected>In Thailand · authorization pending</option><option>Work permit already issued</option><option>Not sure · I need help</option></select><div><span>◷</span><p><b>Interview ready</b><br>Match and interview now. Paid trials unlock after authorization is verified.</p></div></div><div class="trust-boosters"><div class="booster-head"><div><p class="eyebrow">OPTIONAL TRUST BOOSTERS</p><h3>Help families feel confident sooner.</h3><small>Submit now or add these later if your profile needs more responses.</small></div><span id="trustBoostCount">0 of 2 added</span></div><div class="booster-grid"><label class="booster-card"><input type="file" id="videoUpload" accept="video/*"><span>▶</span><div><b>Introduction video</b><p>A short 30–60 second hello</p><small>Show your communication style</small></div><i>+10%</i></label><label class="booster-card"><input type="file" id="referenceUpload" accept=".pdf,.doc,.docx,image/*"><span>✦</span><div><b>Reference letter</b><p>From a previous family or employer</p><small>Marked “provided” until verified</small></div><i>+10%</i></label></div><p class="booster-privacy">Files stay private until you choose to share them with a matched family.</p></div><button class="continue-btn full" id="finishHelperProfile">Submit profile for review <span>→</span></button></div>
+      </main>
+    </div>
+  </section>
+
+  <section class="onboarding" id="onboarding" aria-labelledby="onboardingTitle">
+    <div class="onboarding-top">
+      <a class="brand" href="#" aria-label="Kinderly home"><span class="brand-mark">k</span>Kinderly</a>
+      <select class="language-select" aria-label="Choose language"><option value="en">EN</option><option value="zh">中文</option><option value="th">ไทย</option><option value="my">မြန်မာ</option></select>
+    </div>
+    <div class="onboarding-shell">
+      <aside class="onboarding-aside">
+        <p class="eyebrow">FIND YOUR NANNY</p>
+        <div class="onboarding-steps">
+          <div class="step active" data-step="1"><span>1</span><p><b>Tell us about your family</b><small>Write naturally, in any language</small></p></div>
+          <div class="step" data-step="2"><span>2</span><p><b>Review your care brief</b><small>Confirm what matters most</small></p></div>
+          <div class="step" data-step="3"><span>3</span><p><b>Meet your matches</b><small>Fewer, better-fit nannies</small></p></div>
+        </div>
+        <div class="privacy-card"><span>✦</span><p><b>Your words stay private</b><br>We use them only to understand your care needs and improve your matches.</p></div>
+      </aside>
+
+      <div class="onboarding-main">
+        <div class="prompt-screen" id="promptScreen">
+          <p class="eyebrow">START WITH YOUR OWN WORDS</p>
+          <h1 id="onboardingTitle">What would make life<br><em>easier for your family?</em></h1>
+          <p class="onboarding-lede">No forms to figure out. Describe the nanny you need, your child and your routine—just as you would tell a friend.</p>
+          <div class="prompt-box">
+            <textarea id="carePrompt" aria-label="Describe your nanny needs" maxlength="800" placeholder="Describe your family and the nanny you need..."></textarea>
+            <div class="prompt-footer"><span><b id="charCount">0</b>/800</span><button id="voiceBtn" aria-label="Speak your needs">◉</button><button class="continue-btn" id="understandBtn">Understand my needs <span>→</span></button></div>
+          </div>
+          <div class="prompt-shortcuts"><button class="example-btn" id="exampleBtn"><span>↺</span> Restore the example</button><button class="blank-btn" id="blankBtn">Start with a blank page</button></div>
+          <div class="language-note"><span>文</span><p><b>Write in the language you are comfortable with.</b><br>English, ไทย and 中文 are supported in this prototype.</p></div>
+        </div>
+
+        <div class="brief-screen" id="briefScreen" hidden>
+          <button class="back-btn" id="backBtn">← Back to my description</button>
+          <p class="eyebrow">YOUR CARE BRIEF</p>
+          <h1>Here’s what we<br><em>understood.</em></h1>
+          <p class="onboarding-lede">Check the details before we find your matches. Tap any item to change it.</p>
+          <div class="understood-quote"><span>“</span><p id="originalPrompt"></p></div>
+          <div class="brief-grid" id="briefGrid"></div>
+          <div class="missing-box" id="missingBox">
+            <div><span>?</span><p><b>Two quick details will improve your matches</b><small>We couldn’t find these in your description.</small></p></div>
+            <div class="missing-fields">
+              <label>Monthly budget<select id="budgetSelect"><option value="">Select a range</option><option>฿18,000–22,000</option><option selected>฿22,000–27,000</option><option>฿27,000–35,000</option></select></label>
+              <label>Preferred start date<input id="startDate" type="date" value="2026-10-01"></label>
+            </div>
+          </div>
+          <div class="conditions-box">
+            <div class="conditions-head"><div><p class="eyebrow">JOB CONDITIONS</p><h3>Clear terms attract better-fit nannies.</h3><small>Complete details to improve visibility. “Not provided” still counts as transparent.</small></div><div class="strength-ring"><b id="strengthScore">58</b><span>%<small>strength</small></span></div></div>
+            <div class="strength-track"><i id="strengthBar" style="width:58%"></i></div>
+            <p class="visibility-hint" id="visibilityHint"><span>↗</span> Complete 5 more details to improve visibility.</p>
+            <div class="condition-grid">
+              <label>Paid annual leave<select class="condition-field"><option value="">Not specified</option><option>6 paid days</option><option>12 paid days</option><option>More than 12 days</option><option>Legal minimum applies</option></select></label>
+              <label>Overtime pay<select class="condition-field"><option value="">Not specified</option><option>Fixed hourly rate</option><option>Time off in lieu</option><option>Not expected</option><option>To be agreed</option></select></label>
+              <label>Annual bonus<select class="condition-field"><option value="">Not specified</option><option>Guaranteed fixed bonus</option><option>Performance based</option><option>After one year</option><option>Not provided</option></select></label>
+              <label>Accommodation<select class="condition-field"><option value="not_applicable" selected>Not applicable · Live-out</option><option>Private room</option><option>Shared room</option><option>Not provided</option></select></label>
+              <label>Meals<select class="condition-field"><option value="">Not specified</option><option>Meals during workdays</option><option>Meal allowance</option><option>Kitchen available</option><option>Not provided</option></select></label>
+              <label>Salary payment date<select class="condition-field"><option value="">Not specified</option><option>Last business day</option><option>1st of each month</option><option>15th of each month</option><option>Weekly</option></select></label>
+            </div>
+            <div class="condition-legend"><span><i class="declared"></i>Declared by family</span><span><i class="contracted"></i>Added to contract</span><span><i class="verified"></i>Verified through history</span></div>
+          </div>
+          <div class="brief-actions"><p><span>✓</span> You can refine this later</p><button class="continue-btn" id="findMatchesBtn">Find my matches <span>→</span></button></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Kinderly home"><span class="brand-mark">k</span>Kinderly</a>
+      <div class="top-actions">
+        <select class="language-select" aria-label="Choose language"><option value="en">EN</option><option value="zh">中文</option><option value="th">ไทย</option><option value="my">မြန်မာ</option></select>
+        <button class="notification-btn" id="notificationBtn" aria-label="Open notifications">♢<i id="notificationDot"></i></button>
+        <button class="credit-pill" id="creditBtn" aria-label="View Care Credits"><span>◉</span><b id="creditCount">720</b> credits</button>
+        <button class="avatar" aria-label="Account menu">MC</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">CURATED FOR YOUR FAMILY</p>
+          <h1>Meet nannies who fit<br><em>your real life.</em></h1>
+        </div>
+        <button class="brief" id="briefBtn"><span class="brief-icon">⌂</span><span><b>Your care brief</b><small id="briefSummary">8-month-old · Thong Lo · Live-out</small></span><span class="chevron">›</span></button>
+      </section>
+
+      <section class="match-layout">
+        <aside class="progress-card">
+          <p class="eyebrow">YOUR SEARCH</p>
+          <div class="match-number"><strong id="matchNumber">01</strong><span>/ 03</span></div>
+          <div class="progress"><i id="progressBar"></i></div>
+          <p>Each nanny is hand-picked and has accepted your core role requirements.</p>
+          <div class="trust-note"><span>✓</span><p><b>Not an endless feed</b><br>We show fewer, better matches.</p></div>
+        </aside>
+
+        <section class="candidate-stage" aria-live="polite">
+          <article class="candidate-card" id="candidateCard">
+            <div class="photo-panel">
+              <img id="candidatePhoto" src="assets/nok.svg" alt="Portrait of nanny candidate" />
+              <div class="photo-top"><span class="verified-badge">✓ ID & references verified</span><button class="icon-btn" id="soundBtn" aria-label="Play introduction">▶</button></div>
+              <div class="photo-caption"><span class="online-dot"></span>Available from <b id="availableDate">Oct 1</b></div>
+            </div>
+
+            <div class="profile-panel">
+              <div class="profile-heading">
+                <div><div class="name-line"><h2 id="candidateName">Nok</h2><span id="candidateAge">34</span></div><p id="candidateLocation">Bangkok · 25 min away</p></div>
+                <button class="bookmark" id="bookmarkBtn" aria-label="Save candidate">♡</button>
+              </div>
+
+              <div class="fit-box">
+                <div class="fit-score"><b id="fitScore">94</b><span>%<small>fit</small></span></div>
+                <p id="fitReason"><b>Strong match for your baby</b><br>Infant specialist, within budget, familiar with international families.</p>
+              </div>
+
+              <div class="facts" id="facts"></div>
+
+              <div class="salary-row"><span>Expected monthly salary</span><b id="salary">฿22,000–25,000</b></div>
+
+              <button class="details-btn" id="detailsBtn">View verified profile <span>↗</span></button>
+            </div>
+          </article>
+
+          <div class="decision-row">
+            <button class="pass-btn" id="passBtn"><span>×</span>Not this fit</button>
+            <button class="invite-btn" id="inviteBtn"><span>♡</span>Invite to interview</button>
+          </div>
+          <p class="privacy-note">Your interest stays private until Nok accepts your invitation.</p>
+        </section>
+
+        <aside class="credit-card">
+          <span class="coin">◉</span>
+          <p class="eyebrow">CARE CREDITS</p>
+          <h3>Earn back<br>as you hire.</h3>
+          <p>Complete meaningful steps and use credits on your next service.</p>
+          <ul><li><span>After paid trial</span><b>+200</b></li><li><span>Both leave feedback</span><b>+200</b></li><li><span>30-day check-in</span><b>+300</b></li></ul>
+          <button id="creditLearnBtn">How credits work <span>→</span></button>
+        </aside>
+      </section>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Primary navigation"><button class="active">⌂<span>Discover</span></button><button>♡<span>Saved</span></button><button>◌<span>Interviews</span></button><button>☰<span>Profile</span></button></nav>
+  </div>
+
+  <dialog id="profileDialog">
+    <button class="dialog-close" data-close aria-label="Close">×</button>
+    <div class="dialog-hero"><img id="dialogPhoto" src="assets/nok.svg" alt="Candidate portrait"><div><p class="eyebrow">VERIFIED PROFILE</p><h2 id="dialogName">Nok, 34</h2><p id="dialogSubtitle">Infant nanny · Bangkok</p></div></div>
+    <div class="dialog-content">
+      <section><h3>Why we recommend her</h3><p id="dialogReason"></p></section>
+      <section><h3>Verified care skills</h3><div class="skill-list" id="skillList"></div></section>
+      <section><h3>Work preferences</h3><p id="preferences"></p></section>
+      <section class="reference-box"><span>“</span><p id="referenceQuote"></p></section>
+      <button class="invite-btn full" id="dialogInvite">Invite to interview</button>
+    </div>
+  </dialog>
+
+  <dialog id="simpleDialog" class="simple-dialog"><button class="dialog-close" data-close aria-label="Close">×</button><div id="simpleDialogContent"></div></dialog>
+
+  <dialog id="interviewDialog" class="interview-dialog">
+    <button class="dialog-close" data-close aria-label="Close">×</button>
+    <div class="interview-head">
+      <p class="eyebrow">INTERVIEW INVITATION</p>
+      <h2>Invite <span id="interviewCandidate">Nok</span> to talk</h2>
+      <p>Offer a few times. Her contact details stay private until she accepts.</p>
+    </div>
+    <div class="interview-body">
+      <section>
+        <div class="section-label"><span>1</span><div><b>Choose up to 3 times</b><small>Times shown in Bangkok time (GMT+7)</small></div></div>
+        <div class="time-options" id="timeOptions">
+          <button class="time-option selected" data-time="Tue, Oct 6 · 10:00"><span>Tue<small>Oct 6</small></span><b>10:00</b><i>✓</i></button>
+          <button class="time-option selected" data-time="Wed, Oct 7 · 14:00"><span>Wed<small>Oct 7</small></span><b>14:00</b><i>✓</i></button>
+          <button class="time-option" data-time="Thu, Oct 8 · 18:30"><span>Thu<small>Oct 8</small></span><b>18:30</b><i>✓</i></button>
+        </div>
+      </section>
+      <section>
+        <div class="section-label"><span>2</span><div><b>How should we notify you?</b><small>The nanny receives LINE plus an in-platform alert.</small></div></div>
+        <div class="channel-options">
+          <label><input type="checkbox" checked disabled><span class="channel-icon platform">k</span><b>In-platform</b><small>Always on</small></label>
+          <label><input type="checkbox" id="emailNotify" checked><span class="channel-icon email">@</span><b>Email</b><small>Formal record</small></label>
+          <label><input type="checkbox" id="lineNotify" checked><span class="channel-icon line">L</span><b>LINE</b><small>Instant alert</small></label>
+        </div>
+      </section>
+      <section>
+        <div class="section-label"><span>3</span><div><b>Preferred interview method</b><small>This is shared only after both sides agree.</small></div></div>
+        <div class="method-options">
+          <label><input type="radio" name="method" value="LINE Video" checked><span>LINE Video</span></label>
+          <label><input type="radio" name="method" value="WhatsApp Video"><span>WhatsApp</span></label>
+          <label><input type="radio" name="method" value="WeChat Video"><span>WeChat</span></label>
+          <label><input type="radio" name="method" value="Phone call"><span>Phone</span></label>
+        </div>
+      </section>
+      <label class="message-field">Add a short note <span>optional</span><textarea id="inviteMessage" maxlength="240" placeholder="Hi, we’d love to learn more about your infant-care experience..."></textarea></label>
+      <div class="consent-note"><span>⌁</span><p><b>No contact details are shared yet.</b><br>After she accepts, both sides choose whether to share LINE, WhatsApp, WeChat or phone details.</p></div>
+      <button class="continue-btn send-invite" id="sendInviteBtn">Send interview invitation <span>→</span></button>
+    </div>
+  </dialog>
+
+  <dialog id="matchDialog" class="match-dialog">
+    <button class="dialog-close" data-close aria-label="Close">×</button>
+    <div class="match-celebration"><span>✓</span><p class="eyebrow">BOTH SIDES AGREED</p><h2>It’s an interview match</h2><p id="matchMessage"></p></div>
+    <div class="confirmed-card"><div><small>CONFIRMED TIME</small><b id="confirmedTime">Tue, Oct 6 · 10:00</b></div><div><small>INTERVIEW VIA</small><b id="confirmedMethod">LINE Video</b></div></div>
+    <div class="contact-consent"><h3>Share contact details?</h3><p>Choose what you’re comfortable sharing with the nanny.</p><label><input type="checkbox" checked> Share my LINE ID for this interview</label><label><input type="checkbox"> Keep all coordination inside Kinderly</label></div>
+    <button class="continue-btn full" data-close>Done</button>
+  </dialog>
+
+  <aside class="notification-panel" id="notificationPanel" hidden>
+    <div class="notification-head"><div><p class="eyebrow">UPDATES</p><h3>Notifications</h3></div><button id="closeNotifications">×</button></div>
+    <div id="notificationList"><div class="empty-notifications"><span>♢</span><p><b>You’re all caught up</b><br>Interview and match updates will appear here.</p></div></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js?v=14"></script>
+</body>
+</html>
