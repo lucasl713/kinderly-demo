@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=18" />
+  <link rel="stylesheet" href="styles.css?v=19" />
 </head>
 <body>
   <section class="role-gate" id="roleGate">
@@ -70,7 +70,7 @@
           <div class="missing-box" id="missingBox">
             <div><span>?</span><p><b>Two quick details will improve your matches</b><small>We couldn’t find these in your description.</small></p></div>
             <div class="missing-fields">
-              <label>Monthly budget<select id="budgetSelect"><option value="">Select a range</option><option>฿18,000–22,000</option><option selected>฿22,000–27,000</option><option>฿27,000–35,000</option></select></label>
+              <div class="family-salary-control"><div class="family-salary-head"><span><b>Monthly salary range</b><small>Suggested for this role: ฿22,000–27,000</small></span><strong id="familySalaryValue">฿22,000–27,000</strong></div><label><span>Lowest offer</span><b id="familySalaryLowValue">฿22,000</b><input id="familySalaryLow" type="range" min="15000" max="39000" step="1000" value="22000"></label><label><span>Highest offer</span><b id="familySalaryHighValue">฿27,000</b><input id="familySalaryHigh" type="range" min="16000" max="40000" step="1000" value="27000"></label><p id="salaryMatchWarning" hidden><span>↘</span><b>Fewer likely matches</b> Raising the highest offer to at least ฿22,000 may improve response.</p></div>
               <label>Preferred start date<input id="startDate" type="date" value="2026-10-01"></label>
             </div>
           </div>
@@ -247,6 +247,6 @@
     <div id="notificationList"><div class="empty-notifications"><span>♢</span><p><b>You’re all caught up</b><br>Interview and match updates will appear here.</p></div></div>
   </aside>
   <div class="toast" id="toast" role="status"></div>
-  <script src="app.js?v=18"></script>
+  <script src="app.js?v=19"></script>
 </body>
 </html>
