@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=15" />
+  <link rel="stylesheet" href="styles.css?v=16" />
 </head>
 <body>
   <section class="role-gate" id="roleGate">
@@ -51,6 +51,7 @@
           <p class="eyebrow">START WITH YOUR OWN WORDS</p>
           <h1 id="onboardingTitle">What would make life<br><em>easier for your family?</em></h1>
           <p class="onboarding-lede">No forms to figure out. Describe the nanny you need, your child and your routine—just as you would tell a friend.</p>
+          <div class="coverage-lock"><span>⌖</span><p><b>Bangkok only for now</b><small>We’re building a dense, responsive nanny network across Bangkok before expanding.</small></p><em>Service area locked</em></div>
           <div class="prompt-box">
             <textarea id="carePrompt" aria-label="Describe your nanny needs" maxlength="800" placeholder="Describe your family and the nanny you need..."></textarea>
             <div class="prompt-footer"><span><b id="charCount">0</b>/800</span><button id="voiceBtn" aria-label="Speak your needs">◉</button><button class="continue-btn" id="understandBtn">Understand my needs <span>→</span></button></div>
@@ -127,7 +128,7 @@
             <div class="photo-panel">
               <img id="candidatePhoto" src="assets/nok.svg" alt="Portrait of nanny candidate" />
               <div class="photo-top"><span class="verified-badge">✓ ID & references verified</span><button class="icon-btn" id="soundBtn" aria-label="Play introduction">▶</button></div>
-              <div class="photo-caption"><span class="online-dot"></span>Available from <b id="availableDate">Oct 1</b></div>
+              <div class="photo-caption"><span class="online-dot"></span><b id="activeStatus">Active 12 min ago</b> · Available <b id="availableDate">Oct 1</b></div>
             </div>
 
             <div class="profile-panel">
@@ -140,6 +141,7 @@
                 <div class="fit-score"><b id="fitScore">94</b><span>%<small>fit</small></span></div>
                 <p id="fitReason"><b>Strong match for your baby</b><br>Infant specialist, within budget, familiar with international families.</p>
               </div>
+              <div class="trust-statuses compact"><span class="verified">Photo · verified</span><span class="provided">Video · provided</span><span class="verified">Reference · verified</span><span class="declared">Experience · declared</span><span class="provided">Language · provided</span><span class="verified">Identity · verified</span></div>
 
               <div class="facts" id="facts"></div>
 
@@ -176,6 +178,7 @@
     <div class="dialog-content">
       <section><h3>Why we recommend her</h3><p id="dialogReason"></p></section>
       <section><h3>Verified care skills</h3><div class="skill-list" id="skillList"></div></section>
+      <section><h3>Profile evidence</h3><div class="trust-statuses"><span class="verified">Photo · verified</span><span class="provided">Intro video · provided</span><span class="verified">Reference letter · verified</span><span class="declared">Work experience · declared</span><span class="provided">Languages · provided</span><span class="verified">Identity status · verified</span></div></section>
       <section><h3>Work preferences</h3><p id="preferences"></p></section>
       <section class="reference-box"><span>“</span><p id="referenceQuote"></p></section>
       <button class="invite-btn full" id="dialogInvite">Invite to interview</button>
@@ -228,7 +231,15 @@
     <div class="match-celebration"><span>✓</span><p class="eyebrow">BOTH SIDES AGREED</p><h2>It’s an interview match</h2><p id="matchMessage"></p></div>
     <div class="confirmed-card"><div><small>CONFIRMED TIME</small><b id="confirmedTime">Tue, Oct 6 · 10:00</b></div><div><small>INTERVIEW VIA</small><b id="confirmedMethod">LINE Video</b></div></div>
     <div class="contact-consent"><h3>Share contact details?</h3><p>Choose what you’re comfortable sharing with the nanny.</p><label><input type="checkbox" checked> Share my LINE ID for this interview</label><label><input type="checkbox"> Keep all coordination inside Kinderly</label></div>
-    <button class="continue-btn full" data-close>Done</button>
+    <button class="continue-btn full" id="completeInterviewBtn">Simulate completed interview <span>→</span></button>
+  </dialog>
+
+  <dialog id="interviewReportDialog" class="report-dialog">
+    <button class="dialog-close" data-close aria-label="Close">×</button><p class="eyebrow">AFTER THE INTERVIEW</p><h2>How did the conversation go?</h2><p class="report-lede">A short factual report improves future recommendations for both sides.</p><div class="report-summary"><span>✓</span><p><b id="reportCandidate">Nok accepted and attended</b><small id="reportTime">Interview completed via LINE Video</small></p></div><label>Interview result<select id="interviewOutcome"><option>Proceed to paid trial</option><option>Keep considering</option><option>Not a fit</option><option>Candidate did not attend</option></select></label><label>What did you learn?<textarea id="interviewNotes" placeholder="Experience, communication, schedule fit..."></textarea></label><div class="report-reward"><span>◉</span><p><b>Complete this report: +100 Care Credits</b><small>Credits reward useful follow-up, not positive ratings.</small></p></div><button class="continue-btn full" id="submitInterviewReport">Save interview report <span>+100</span></button>
+  </dialog>
+
+  <dialog id="workReportDialog" class="report-dialog">
+    <button class="dialog-close" data-close aria-label="Close">×</button><p class="eyebrow">AFTER WORK STARTS</p><h2>30-day work check-in</h2><p class="report-lede">Track the working relationship—not just a star rating.</p><div class="report-metrics"><label>Attendance<select><option>Reliable</option><option>Some issues</option><option>Serious concern</option></select></label><label>Care quality<select><option>Meeting expectations</option><option>Still adjusting</option><option>Not working out</option></select></label><label>Role accuracy<select><option>Matches agreed duties</option><option>Duties changed</option><option>Needs discussion</option></select></label><label>Continue working together?<select><option>Yes</option><option>Unsure</option><option>No</option></select></label></div><label>Private check-in note<textarea placeholder="What is going well? What needs attention?"></textarea></label><div class="report-reward"><span>◉</span><p><b>Complete this check-in: +300 Care Credits</b><small>Creates verified work-history data for future matching.</small></p></div><button class="continue-btn full" id="submitWorkReport">Complete check-in <span>+300</span></button>
   </dialog>
 
   <aside class="notification-panel" id="notificationPanel" hidden>
@@ -236,6 +247,6 @@
     <div id="notificationList"><div class="empty-notifications"><span>♢</span><p><b>You’re all caught up</b><br>Interview and match updates will appear here.</p></div></div>
   </aside>
   <div class="toast" id="toast" role="status"></div>
-  <script src="app.js?v=15"></script>
+  <script src="app.js?v=16"></script>
 </body>
 </html>
